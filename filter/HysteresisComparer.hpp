@@ -1,0 +1,16 @@
+//
+// Created by zhouj on 2023/3/27.
+//
+
+#ifndef AQ_DJ_2022_LIBS_WIBOTDSP_FILTER_HYSTERESISCOMPARER_HPP_
+#define AQ_DJ_2022_LIBS_WIBOTDSP_FILTER_HYSTERESISCOMPARER_HPP_
+
+namespace wibot {
+
+class HysteresisComparer {
+
+};
+
+} // wibot
+
+#endif //AQ_DJ_2022_LIBS_WIBOTDSP_FILTER_HYSTERESISCOMPARER_HPP_
