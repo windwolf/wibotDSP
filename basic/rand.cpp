@@ -1,37 +1,31 @@
 #include "rand.hpp"
 
-
 /**
  * @brief generate a random number in range of 0 to 1, with precision 0.000001
  * precious
- * @return float32_t 
+ * @return float32_t
  */
-float32_t rand1f()
-{
+float32_t rand1f() {
     return (float32_t)rand() / (float32_t)RAND_MAX;
 }
-float32_t randrf(float32_t a, float32_t b)
-{
+float32_t randrf(float32_t a, float32_t b) {
     return a + (float32_t)rand() / (float32_t)RAND_MAX * (b - a);
 }
 
-float32_t randnf(float32_t mu, float32_t sigma)
-{
+float32_t randnf(float32_t mu, float32_t sigma) {
     const float32_t epsilon = 0.00000001f;
-    //const float32_t two_pi = 2.0 * PI;
+    // const float32_t two_pi = 2.0 * PI;
 
     static float32_t z0, z1;
-    static bool generate;
+    static bool      generate;
     generate = !generate;
 
-    if (!generate)
-    {
+    if (!generate) {
         return z1 * sigma + mu;
     }
 
     float32_t u1, u2;
-    do
-    {
+    do {
         u1 = rand1f();
         u2 = rand1f();
     } while (u1 <= epsilon);

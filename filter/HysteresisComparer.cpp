@@ -4,6 +4,4 @@
 
 #include "HysteresisComparer.hpp"
 
-namespace wibot::control
-{
-} // wibot
+namespace wibot::control {}  // namespace wibot::control
