@@ -25,6 +25,9 @@ float FirstOrderLowPassFilter::filter(float input) {
     }
 
     return _outputLast;
-};
+}
+void FirstOrderLowPassFilter::reset(float initValue) {
+    _outputLast = initValue;
+}
 
 }  // namespace wibot::control
